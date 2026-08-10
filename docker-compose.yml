@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    image: eserveconn-web:latest
+    ports:
+      - "${PORT:-4174}:4174"
+    environment:
+      PORT: 4174
+      SERVER_NAME: ${SERVER_NAME:-}
+      CONTACT_TO: ${CONTACT_TO:-eserveconne@gmail.com}
+      MAIL_FROM: ${MAIL_FROM:-eserveconne@gmail.com}
+      SMTP_HOST: ${SMTP_HOST:-smtp.gmail.com}
+      SMTP_PORT: ${SMTP_PORT:-465}
+      SMTP_SECURE: ${SMTP_SECURE:-true}
+      SMTP_USER: ${SMTP_USER:-eserveconne@gmail.com}
+      SMTP_PASS: ${SMTP_PASS:-}
+    restart: unless-stopped
