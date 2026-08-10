@@ -76,10 +76,14 @@ The app will be available on `http://localhost:4174` by default. Set `SERVER_NAM
 
 CI runs on pushes and pull requests to `main` or `master`. It installs dependencies, runs linting, builds the Vite app, and verifies that the Docker image builds successfully.
 
-Add these repository secrets before deployment automation is added:
+On pushes to `main` or `master`, and on manual workflow runs, the deploy job copies the project to the server over SSH, builds the Docker image on the server, and restarts the `eserveconn-web` container on port `4174`.
+
+Add these repository secrets in GitHub repository settings:
 
 ```txt
+SERVER_IP
 SERVER_NAME
+SERVER_PASSWORD
 CONTACT_TO
 MAIL_FROM
 SMTP_HOST
