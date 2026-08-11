@@ -1,4 +1,4 @@
-import denkoImage from '../assets/images/denko image.png'
+import denkoImage from '../assets/images/denko-image.png'
 import dufitimanaImage from '../assets/images/dufitimana.png'
 import remainingTeamImage from '../assets/images/image.png'
 
