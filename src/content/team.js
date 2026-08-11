@@ -5,7 +5,7 @@ import remainingTeamImage from '../assets/images/image.png'
 export const team = [
   {
     initials: 'JD',
-    name: 'Juile Dashimye',
+    name: 'Jules NDASHIMYE',
     role: 'Managing Director',
     image: remainingTeamImage,
     imageClassName: '-rotate-3 scale-110 object-[52%_44%]',
