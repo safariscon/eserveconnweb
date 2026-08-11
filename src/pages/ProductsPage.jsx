@@ -6,6 +6,7 @@ export default function ProductsPage() {
   setPageMeta({
     title: 'Products | SafariScon Platform by Eserveconn Ltd',
     description: 'Discover SafariScon Platform, a smart digital product developed by Eserveconn Ltd.',
+    path: '/products',
   })
 
   return (

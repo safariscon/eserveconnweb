@@ -4,8 +4,9 @@ import { setPageMeta } from '../utils/seo'
 
 export default function AboutPage() {
   setPageMeta({
-    title: 'About Eserveconn Ltd | Software Company in Rwanda',
-    description: 'Learn about Eserveconn Ltd, its mission, vision, and software development work in Rwanda.',
+    title: 'About Eserveconn | Technology & Software Solutions in Rwanda',
+    description: 'Learn about Eserveconn Ltd, a Rwanda-based technology company building software, digital platforms, and practical business solutions.',
+    path: '/about',
   })
 
   return (

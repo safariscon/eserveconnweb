@@ -5,6 +5,7 @@ export default function TeamPage() {
   setPageMeta({
     title: 'Team | Eserveconn Ltd',
     description: 'Meet the Eserveconn Ltd team building software solutions from Rwanda.',
+    path: '/team',
   })
 
   return <Team />

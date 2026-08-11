@@ -14,9 +14,9 @@ export default function Hero() {
             Eserveconn Ltd
           </span>
           <h1 className="mt-7 max-w-3xl font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
-            Empowering Rwanda Through{' '}
+            Eserveconn -{' '}
             <span className="text-blue-600">
-              Smart Digital Solutions
+              Digital Solutions & Software Development
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 lg:text-xl">

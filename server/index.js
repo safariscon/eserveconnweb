@@ -10,7 +10,20 @@ const app = express()
 const port = Number(process.env.PORT || 4174)
 const distDir = path.resolve(__dirname, '../dist')
 
+app.set('trust proxy', true)
 app.use(express.json({ limit: '20kb' }))
+
+app.use((req, res, next) => {
+  const host = req.headers.host
+  const forwardedProto = req.headers['x-forwarded-proto']
+  const protocol = Array.isArray(forwardedProto) ? forwardedProto[0] : forwardedProto
+
+  if (host === 'www.eserveconn.com' || (host === 'eserveconn.com' && protocol === 'http')) {
+    return res.redirect(301, `https://eserveconn.com${req.originalUrl}`)
+  }
+
+  next()
+})
 
 const requiredMailEnv = ['CONTACT_TO', 'MAIL_FROM', 'SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS']
 
