@@ -15,3 +15,14 @@ services:
       SMTP_USER: ${SMTP_USER:-eserveconne@gmail.com}
       SMTP_PASS: ${SMTP_PASS:-}
     restart: unless-stopped
+
+
+
+
+
+
+
+
+
+
+    

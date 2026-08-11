@@ -1,5 +1,5 @@
 import denkoImage from '../assets/images/denko-image.png'
-import dufitimanaImage from '../assets/images/dufitimana.png'
+import dufitimanaImage from '../assets/images/theoduf.jpeg'
 import remainingTeamImage from '../assets/images/image.png'
 
 export const team = [
@@ -9,7 +9,7 @@ export const team = [
     role: 'Managing Director',
     image: remainingTeamImage,
     imageClassName: '-rotate-3 scale-110 object-[52%_44%]',
-    description: 'Tourism expert and university lecturer driving innovation and strategic growth.',
+    description: 'Tourism Expert and university lecturer driving innovation and strategic growth.',
   },
   {
     initials: 'TD',

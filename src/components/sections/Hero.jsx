@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { Rocket, ShieldCheck, Sparkles } from 'lucide-react'
+import { Rocket, ShieldCheck } from 'lucide-react'
 import Button from '../common/Button'
 import SoftwareSolutionsVisual from '../common/SoftwareSolutionsVisual'
 import { company } from '../../content/company'
@@ -11,8 +11,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-extrabold text-blue-700 shadow-sm">
-            <Sparkles className="h-3.5 w-3.5" />
-            Software engineering from Gisenyi
+            Eserveconn Ltd
           </span>
           <h1 className="mt-7 max-w-3xl font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
             Empowering Rwanda Through{' '}
