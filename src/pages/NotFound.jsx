@@ -1,11 +1,17 @@
 import Button from '../components/common/Button'
+import { pagesSeo } from '../content/seo'
 import { setPageMeta } from '../utils/seo'
 
 export default function NotFound() {
+  const { title, description, keywords, robots } = pagesSeo.notFound
+  const path = typeof window !== 'undefined' ? window.location.pathname : '/404'
+
   setPageMeta({
-    title: 'Page Not Found | Eserveconn Ltd',
-    description: 'The requested Eserveconn Ltd page could not be found.',
-    path: '/404',
+    title,
+    description,
+    path,
+    keywords,
+    robots,
   })
 
   return (

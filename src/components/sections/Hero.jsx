@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Rocket, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Button from '../common/Button'
 import SoftwareSolutionsVisual from '../common/SoftwareSolutionsVisual'
 import { company } from '../../content/company'
@@ -11,7 +12,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-extrabold text-blue-700 shadow-sm">
-            Eserveconn Ltd
+            Eserveconn Ltd · eServeConn Rwanda
           </span>
           <h1 className="mt-7 max-w-3xl font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
             Eserveconn -{' '}
@@ -20,7 +21,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 lg:text-xl">
-            {company.name} develops modern software solutions that help citizens, businesses, and institutions become more efficient through technology.
+            {company.name} develops modern software solutions that help citizens, businesses, and institutions become more efficient through technology. Also known as eServeConn and eServe Connect, we run a{' '}
+            <Link className="font-semibold text-blue-700 underline-offset-2 hover:underline" to="/products">service connection platform</Link>
+            {' '}that helps people find service providers and connect customers with services in Kigali and across Rwanda.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button to="/products">Explore Products</Button>

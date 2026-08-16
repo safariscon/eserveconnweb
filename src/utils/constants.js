@@ -4,5 +4,5 @@ export const reasons = [
   { title: 'Secure Software', description: 'Security-aware development from authentication to deployment.' },
   { title: 'Excellent Support', description: 'Clear communication before, during, and after delivery.' },
   { title: 'Fast Delivery', description: 'Lean delivery cycles that move from idea to usable product quickly.' },
-  { title: 'Customer Satisfaction', description: 'Solutions shaped around measurable value and long-term trust.' },
+  { title: 'Customer Satisfaction', description: 'Solutions shaped around measurable value and long-term trust, including service connection products for Kigali and Rwanda.' },
 ]

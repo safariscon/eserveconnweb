@@ -4,11 +4,16 @@ import Card from '../common/Card'
 import SectionTitle from '../common/SectionTitle'
 import { products } from '../../content/products'
 
-export default function Products() {
+export default function Products({ headingAs = 'h2' }) {
   return (
     <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Products" title="Our Products" description="Platforms we build and operate to solve practical, high-value problems." />
+        <SectionTitle
+          as={headingAs}
+          eyebrow="Products"
+          title="Our Products"
+          description="Platforms we build and operate to solve practical, high-value problems. The eServeConn Platform is a service marketplace that helps people find services and find local professionals in Rwanda and Kigali."
+        />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <Card key={product.name} className="group flex h-full flex-col overflow-hidden rounded-2xl p-0 shadow-[0_18px_50px_rgba(15,23,42,0.06)] hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_24px_70px_rgba(15,23,42,0.09)]">
@@ -26,7 +31,11 @@ export default function Products() {
 
                 <div className="min-w-0">
                   <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Product</p>
-                  <h3 className="font-display text-2xl font-extrabold leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl">{product.name}</h3>
+                  <h3 className="font-display text-2xl font-extrabold leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl">
+                    <Link to="/products" className="transition hover:text-blue-700">
+                      {product.name}
+                    </Link>
+                  </h3>
                   <p className="mt-4 text-sm leading-6 text-slate-600">{product.description}</p>
                 </div>
 

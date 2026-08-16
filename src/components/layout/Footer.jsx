@@ -13,6 +13,9 @@ export default function Footer() {
             <span className="font-display font-extrabold text-white">{company.name}</span>
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-400">A Rwandan software company building secure, scalable digital products.</p>
+          <p className="mt-3 text-sm leading-6 text-slate-400">
+            eServeConn, also known as eServe Connect and ServiceConn, is a service connection platform that helps people find service providers and connect customers with services in Kigali and across Rwanda.
+          </p>
           <div className="mt-5 flex gap-3">
             {['f', 'in', 'X'].map((item) => (
               <span key={item} className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-xs font-bold text-white">
@@ -22,13 +25,25 @@ export default function Footer() {
           </div>
         </div>
         <FooterLinks title="Quick Links" items={navigation.map((item) => ({ label: item.label, path: item.path }))} />
-        <FooterLinks title="Services" items={services.slice(0, 5).map((service) => ({ label: service.title, path: `/services#${slugify(service.title)}` }))} />
+        <FooterLinks
+          title="Services"
+          items={[
+            ...services.slice(0, 5).map((service) => ({ label: service.title, path: `/services#${slugify(service.title)}` })),
+            { label: 'All eServeConn Services', path: '/services' },
+          ]}
+        />
         <div>
           <h3 className="font-display font-bold text-white">Contact Information</h3>
           <div className="mt-4 space-y-3 text-sm text-slate-400">
             <p>{company.email}</p>
             <p>{company.phone}</p>
             <p>{company.location}</p>
+            <p>Serving {company.serviceArea}</p>
+          </div>
+          <div className="mt-5 grid gap-2 text-sm text-slate-400">
+            <Link to="/products" className="transition hover:text-white">eServeConn Platform</Link>
+            <Link to="/products" className="transition hover:text-white">Service marketplace</Link>
+            <Link to="/contact" className="transition hover:text-white">Service Connect Kigali</Link>
           </div>
         </div>
       </div>

@@ -1,17 +1,17 @@
 export const services = [
   {
     title: 'Custom Software Development',
-    description: 'Tailored systems engineered around your exact workflows, data, and long-term goals.',
+    description: 'Tailored systems engineered around your exact workflows, data, and long-term goals, including service connection platforms that connect customers with services.',
     icon: 'Code2',
   },
   {
     title: 'Mobile App Development',
-    description: 'Fast, intuitive Android and iOS apps designed for Rwandan users.',
+    description: 'Fast, intuitive Android and iOS apps designed for Rwandan users, including the eServeConn App experience for finding services and local professionals.',
     icon: 'Smartphone',
   },
   {
     title: 'Website Development',
-    description: 'Modern websites and portals that load fast, rank well, and convert.',
+    description: 'Modern websites and portals that load fast, rank well, and convert, including the eServeConn Website and online service connection portals.',
     icon: 'Globe2',
   },
   {
@@ -26,7 +26,7 @@ export const services = [
   },
   {
     title: 'API Integration',
-    description: 'Connect payments, CRMs, portals, and internal tools into one clean flow.',
+    description: 'Connect payments, CRMs, portals, and internal tools into one clean flow. We also connect service providers and marketplace systems across Rwanda.',
     icon: 'Layers3',
   },
   {

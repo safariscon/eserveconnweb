@@ -7,7 +7,7 @@ export default function SoftwareSolutionsVisual() {
       className="relative mx-auto hidden min-h-[430px] w-full max-w-[590px] lg:block"
       animate={{ y: [0, -10, 0] }}
       transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-      aria-label="Modern digital dashboard illustration"
+      aria-label="eServeConn digital dashboard illustration for software and service connection platforms in Rwanda"
     >
       <div className="absolute inset-0 -z-10 rounded-full bg-blue-200/40 blur-3xl" />
 

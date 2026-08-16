@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 border-b transition ${scrolled ? 'border-slate-200/80 bg-white/95 shadow-sm backdrop-blur-xl' : 'border-slate-100 bg-white'}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+        <Link to="/" className="flex items-center gap-3" aria-label="eServeConn home" onClick={() => setOpen(false)}>
           <span className="grid h-9 w-9 place-items-center rounded-full bg-blue-600 font-display text-sm font-extrabold text-white shadow-lg shadow-blue-600/25">
             E
           </span>

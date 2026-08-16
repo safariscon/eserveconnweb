@@ -3,18 +3,23 @@ import SectionTitle from '../common/SectionTitle'
 import Reveal from '../common/Reveal'
 import { team } from '../../content/team'
 
-export default function Team() {
+export default function Team({ headingAs = 'h2' }) {
   return (
     <section className="bg-slate-50 px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Our Team" title="Meet the team" description="A focused team of builders shaping Rwanda's digital future." />
+        <SectionTitle
+          as={headingAs}
+          eyebrow="Our Team"
+          title="Meet the team"
+          description="A focused team of builders shaping Rwanda's digital future and helping people find local professionals through eServeConn."
+        />
         <div className="grid gap-6 md:grid-cols-3">
           {team.map((member) => (
             <Reveal key={member.name}>
               <Card className="h-full p-8 text-center hover:-translate-y-2">
                 {member.image ? (
                   <div className="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-blue-600 shadow-xl shadow-blue-600/25">
-                    <img className={`h-full w-full object-cover ${member.imageClassName || ''}`} src={member.image} alt={member.name} />
+                    <img className={`h-full w-full object-cover ${member.imageClassName || ''}`} src={member.image} alt={`${member.name}, ${member.role} at eServeConn Rwanda`} />
                   </div>
                 ) : (
                   <div className="mx-auto grid h-32 w-32 place-items-center rounded-full bg-gradient-to-br from-blue-600 to-sky-400 font-display text-3xl font-extrabold text-white shadow-xl shadow-blue-600/25">

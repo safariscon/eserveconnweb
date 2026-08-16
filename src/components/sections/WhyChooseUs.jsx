@@ -4,11 +4,16 @@ import SectionTitle from '../common/SectionTitle'
 import Reveal from '../common/Reveal'
 import { reasons } from '../../utils/constants'
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ headingAs = 'h2' }) {
   return (
     <section className="px-4 pb-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Why Us" title="Why choose Eserveconn" description="We pair modern engineering with practical partnership and clear accountability." />
+        <SectionTitle
+          as={headingAs}
+          eyebrow="Why Us"
+          title="Why choose Eserveconn"
+          description="We pair modern engineering with practical partnership and clear accountability for teams in Kigali, Rubavu, and across Rwanda."
+        />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason) => (
             <Reveal key={reason.title}>

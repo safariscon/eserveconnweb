@@ -1,18 +1,34 @@
+import Faq from '../components/sections/Faq'
 import Services from '../components/sections/Services'
 import WhyChooseUs from '../components/sections/WhyChooseUs'
-import { setPageMeta } from '../utils/seo'
+import { pagesSeo } from '../content/seo'
+import { breadcrumbSchema, organizationSchema, setPageMeta, webPageSchema } from '../utils/seo'
+import { servicesSchema } from '../utils/structuredData'
 
 export default function ServicesPage() {
+  const { title, description, path, keywords } = pagesSeo.services
+
   setPageMeta({
-    title: 'Eserveconn Services | Software, Web & Digital Solutions',
-    description: 'Explore Eserveconn software development, mobile app, web application, cloud, API, UI/UX, and support services for organizations in Rwanda.',
-    path: '/services',
+    title,
+    description,
+    path,
+    keywords,
+    structuredData: [
+      organizationSchema(description),
+      webPageSchema({ title, description, path }),
+      breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'eServeConn Services', path: '/services' },
+      ]),
+      servicesSchema(),
+    ],
   })
 
   return (
     <>
-      <Services />
+      <Services headingAs="h1" />
       <WhyChooseUs />
+      <Faq />
     </>
   )
 }

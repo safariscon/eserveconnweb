@@ -3,7 +3,7 @@ import Button from '../common/Button'
 import SectionTitle from '../common/SectionTitle'
 import { company } from '../../content/company'
 
-export default function Contact() {
+export default function Contact({ headingAs = 'h2' }) {
   const whatsappNumber = '250788836180'
   const whatsappLink = `https://wa.me/${whatsappNumber}`
   const emailLink = `mailto:${company.email}`
@@ -15,7 +15,12 @@ export default function Contact() {
   return (
     <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-7xl">
-        <SectionTitle eyebrow="Contact Us" title="Let's build something together" description="Tell us about your project and our team will get back to you with clear next steps." />
+        <SectionTitle
+          as={headingAs}
+          eyebrow="Contact Us"
+          title="Let's build something together"
+          description="Tell us about your project and our team will get back to you with clear next steps. Service Connect Kigali and eServeConn Rwanda clients can reach us for software, marketplace, and service connection support."
+        />
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60">
             <h3 className="font-display text-2xl font-bold text-slate-950">Ready to talk?</h3>
@@ -44,8 +49,8 @@ export default function Contact() {
             </div>
             <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 text-center">
               <MapPin className="mx-auto h-8 w-8 text-blue-600" />
-              <h3 className="mt-3 font-display text-lg font-bold text-slate-950">Built in Rubavu</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">We proudly create software from Gisenyi for Rwanda and beyond.</p>
+              <h3 className="mt-3 font-display text-lg font-bold text-slate-950">Built in Rubavu, serving Kigali</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">We proudly create software from Gisenyi for Rwanda and beyond, including Service Conn Kigali and local service providers nationwide.</p>
             </div>
           </div>
         </div>

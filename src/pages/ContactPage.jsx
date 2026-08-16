@@ -1,12 +1,24 @@
 import Contact from '../components/sections/Contact'
-import { setPageMeta } from '../utils/seo'
+import { pagesSeo } from '../content/seo'
+import { breadcrumbSchema, organizationSchema, setPageMeta, webPageSchema } from '../utils/seo'
 
 export default function ContactPage() {
+  const { title, description, path, keywords } = pagesSeo.contact
+
   setPageMeta({
-    title: 'Contact Eserveconn | Digital Solutions & Software Development',
-    description: 'Contact Eserveconn Ltd in Gisenyi, Rubavu District, Rwanda for software development, web applications, and digital solution projects.',
-    path: '/contact',
+    title,
+    description,
+    path,
+    keywords,
+    structuredData: [
+      organizationSchema(description),
+      webPageSchema({ title, description, path }),
+      breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Contact eServeConn', path: '/contact' },
+      ]),
+    ],
   })
 
-  return <Contact />
+  return <Contact headingAs="h1" />
 }

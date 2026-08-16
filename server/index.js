@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import express from 'express'
 import nodemailer from 'nodemailer'
+import { applyPageSeoToHtml, knownPaths } from '../src/content/seo.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -107,7 +108,7 @@ app.post('/api/contact', async (req, res) => {
 })
 
 if (fs.existsSync(distDir)) {
-  app.use(express.static(distDir))
+  app.use(express.static(distDir, { index: false }))
 }
 
 app.use((req, res, next) => {
@@ -118,7 +119,10 @@ app.use((req, res, next) => {
   const indexFile = path.join(distDir, 'index.html')
 
   if (fs.existsSync(indexFile)) {
-    return res.sendFile(indexFile)
+    const pathname = req.path.length > 1 && req.path.endsWith('/') ? req.path.slice(0, -1) : req.path || '/'
+    const html = applyPageSeoToHtml(fs.readFileSync(indexFile, 'utf8'), pathname)
+    const status = knownPaths.includes(pathname) ? 200 : 404
+    return res.status(status).type('html').send(html)
   }
 
   res.status(404).send('Build output not found. Run npm run build first.')
