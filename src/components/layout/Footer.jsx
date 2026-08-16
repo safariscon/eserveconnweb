@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-400">A Rwandan software company building secure, scalable digital products.</p>
           <p className="mt-3 text-sm leading-6 text-slate-400">
-            eServeConn, also known as eServe Connect and ServiceConn, is a service connection platform that helps people find service providers and connect customers with services in Kigali and across Rwanda.
+            eServeConn, also known as eServe Connect, ServiceConn, eservecon, and eserve con, is a service connection platform that helps people find service providers and connect customers with services in Kigali and across Rwanda.
           </p>
           <div className="mt-5 flex gap-3">
             {['f', 'in', 'X'].map((item) => (

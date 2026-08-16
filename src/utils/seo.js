@@ -120,7 +120,7 @@ export function organizationSchema(description) {
     legalName: company.name,
     alternateName: brandNames.filter((name) => name !== siteName),
     url: canonicalUrl('/'),
-    logo: `${siteUrl}/favicon.svg`,
+    logo: `${siteUrl}/favicon-192.png`,
     image: defaultOgImage,
     description,
     email: company.email,
@@ -153,7 +153,7 @@ export function websiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteName,
-    alternateName: ['eServeConn', 'eServe Connect', 'eServe Connection', 'ServiceConn', 'Service Connect', 'Eserve Conn', 'Eserve'],
+    alternateName: ['eServeConn', 'eServe Connect', 'eServe Connection', 'ServiceConn', 'Service Connect', 'Eserve Conn', 'Eserve', 'eservecon', 'eserve con', 'Eservecon'],
     url: canonicalUrl('/'),
     inLanguage: 'en',
     publisher: {

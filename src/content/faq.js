@@ -2,12 +2,17 @@ export const faqs = [
   {
     question: 'What is eServeConn?',
     answer:
-      'eServeConn, also written as Eserveconn, eServe Connect, and e Serve Conn, is a Rwanda-based technology company. We build digital solutions, software, and a service connection platform that helps people find services and connect customers with service providers.',
+      'eServeConn, also written as Eserveconn, eServe Connect, e Serve Conn, eservecon, and eserve con, is a Rwanda-based technology company. We build digital solutions, software, and a service connection platform that helps people find services and connect customers with service providers. If you searched eservecon without the double n, this is still the official eServeConn website.',
   },
   {
     question: 'Is eServeConn the same as ServiceConn or Service Connect?',
     answer:
-      'Yes. People also search for ServiceConn, Service Connect, Service Connection, Service Connections, Service Conn, eService Connect, and eServices Connect. Those names all point to eServeConn, the Eserveconn Ltd website, platform, and services.',
+      'Yes. People also search for ServiceConn, Service Connect, Service Connection, Service Connections, Service Conn, eService Connect, eServices Connect, eservecon, eserve con, eservconn, and eservcon. Those names all point to eServeConn, the Eserveconn Ltd website, platform, and services.',
+  },
+  {
+    question: 'Did I find eServeConn if I searched eservecon?',
+    answer:
+      'Yes. Searches like eservecon, eserve con, eservcon, e serve con, and e-serve-conn all refer to eServeConn. The official website is eserveconn.com, even if the extra n was left out.',
   },
   {
     question: 'Does eServeConn work in Kigali and across Rwanda?',

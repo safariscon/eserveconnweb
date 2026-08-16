@@ -35,6 +35,19 @@ export const brandNames = [
   'e Services',
   'Eserve Conn',
   'Eserve',
+  'eservecon',
+  'Eservecon',
+  'eServeCon',
+  'eserve con',
+  'Eserve Con',
+  'e serve con',
+  'eservconn',
+  'eservcon',
+  'eservecon rwanda',
+  'eserve con rwanda',
+  'e-serve-conn',
+  'eserve-conn',
+  'ServeConn',
 ]
 
 export const defaultKeywords = [
@@ -52,6 +65,9 @@ export const defaultKeywords = [
   'local service providers',
   'Kigali',
   'Rwanda',
+  'eservecon',
+  'eserve con',
+  'Eservecon',
 ]
 
 export const pagesSeo = {
@@ -59,7 +75,7 @@ export const pagesSeo = {
     path: '/',
     title: 'Eserveconn | Digital Solutions & Software Development in Rwanda',
     description:
-      'Eserveconn is a Rwanda-based technology company delivering modern software development, web applications, digital platforms, and innovative technology solutions for businesses and organizations. eServeConn, also known as eServe Connect and ServiceConn, is a service connection platform that helps people find service providers, find local professionals, and connect customers with services across Kigali and Rwanda.',
+      'Eserveconn is a Rwanda-based technology company delivering modern software development, web applications, digital platforms, and innovative technology solutions for businesses and organizations. eServeConn, also known as eServe Connect, ServiceConn, eservecon, and eserve con, is a service connection platform that helps people find service providers, find local professionals, and connect customers with services across Kigali and Rwanda.',
     keywords: [
       ...defaultKeywords,
       'eServeConn App',
@@ -69,6 +85,9 @@ export const pagesSeo = {
       'online service connection',
       'services marketplace',
       'service provider marketplace',
+      'eservecon',
+      'eserve con',
+      'eservconn',
     ],
   },
   about: {
