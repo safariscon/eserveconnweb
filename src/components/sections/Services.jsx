@@ -7,23 +7,25 @@ import { slugify } from '../../utils/helpers'
 
 const icons = { Cloud, Code2, DatabaseZap, Globe2, Headphones, Layers3, MousePointer2, Smartphone }
 
-export default function Services({ headingAs = 'h2' }) {
+export default function Services({ headingAs = 'h2', showHeader = true }) {
   return (
-    <section className="bg-slate-50 px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+    <section className="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <SectionTitle
-          as={headingAs}
-          eyebrow="What We Do"
-          title="Services built for real impact"
-          description="From first concept to long-term support, we cover the full software lifecycle. eServeConn Services help organizations in Kigali and Rwanda connect services, connect service providers, and launch an online service connection."
-        />
+        {showHeader ? (
+          <SectionTitle
+            as={headingAs}
+            eyebrow="What We Do"
+            title="Services built for real impact"
+            description="From first concept to long-term support, we cover the full software lifecycle."
+          />
+        ) : null}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = icons[service.icon]
             return (
-              <Reveal key={service.title}>
+              <Reveal key={service.title} delay={index * 0.05}>
                 <Card id={slugify(service.title)} className="group h-full">
-                  <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
+                  <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-blue-600 transition duration-300 group-hover:bg-blue-600 group-hover:text-white">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-lg font-bold text-slate-950">{service.title}</h3>

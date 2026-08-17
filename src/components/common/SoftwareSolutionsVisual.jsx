@@ -5,19 +5,17 @@ export default function SoftwareSolutionsVisual() {
   return (
     <motion.div
       className="relative mx-auto hidden min-h-[430px] w-full max-w-[590px] lg:block"
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-      aria-label="eServeConn digital dashboard illustration for software and service connection platforms in Rwanda"
+      aria-label="Digital dashboard illustration"
     >
-      <div className="absolute inset-0 -z-10 rounded-full bg-blue-200/40 blur-3xl" />
+      <div className="absolute inset-8 -z-10 rounded-full bg-blue-200/35 blur-3xl" />
 
-      <FloatingCard className="left-8 top-32 w-24 rotate-[-4deg]">
+      <FloatingCard className="left-8 top-32 w-24 rotate-[-4deg]" delay={0}>
         <p className="text-[9px] font-bold text-slate-400">Active Users</p>
         <p className="mt-1 text-xl font-extrabold text-slate-900">7,341</p>
         <MiniBars />
       </FloatingCard>
 
-      <FloatingCard className="bottom-5 left-36 w-28 rotate-[5deg]">
+      <FloatingCard className="bottom-5 left-36 w-28 rotate-[5deg]" delay={0.4}>
         <p className="text-[9px] font-bold text-slate-400">Recent Orders</p>
         {['#3921', '#4020', '#2559'].map((item) => (
           <div key={item} className="mt-2 flex items-center justify-between text-[8px] font-bold text-slate-500">
@@ -27,7 +25,11 @@ export default function SoftwareSolutionsVisual() {
         ))}
       </FloatingCard>
 
-      <div className="absolute left-[130px] top-24 h-[290px] w-[350px] rotate-[8deg] rounded-[28px] border border-blue-100 bg-white p-4 shadow-2xl shadow-blue-900/15">
+      <motion.div
+        className="absolute left-[130px] top-24 h-[290px] w-[350px] rotate-[8deg] rounded-[28px] border border-blue-100 bg-white p-4 shadow-2xl shadow-blue-900/15"
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+      >
         <div className="absolute bottom-0 left-0 top-0 w-14 rounded-l-[28px] bg-blue-600 p-3 text-white shadow-xl shadow-blue-600/25">
           <div className="mb-5 grid h-7 w-7 place-items-center rounded-full bg-white/20">
             <CloudUpload className="h-4 w-4" />
@@ -69,9 +71,9 @@ export default function SoftwareSolutionsVisual() {
             </svg>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <FloatingCard className="right-4 top-40 w-40 rotate-[7deg]">
+      <FloatingCard className="right-4 top-40 w-40 rotate-[7deg]" delay={0.8}>
         <div className="flex items-center gap-3">
           <div className="grid h-16 w-16 place-items-center rounded-full bg-[conic-gradient(#2563eb_75%,#e6eefc_0)]">
             <div className="grid h-11 w-11 place-items-center rounded-full bg-white text-xs font-extrabold text-slate-900">75%</div>
@@ -84,24 +86,28 @@ export default function SoftwareSolutionsVisual() {
         </div>
       </FloatingCard>
 
-      <div className="absolute right-8 top-12 grid h-24 w-28 place-items-center rounded-[2rem] bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-2xl shadow-blue-500/30">
+      <motion.div className="absolute right-8 top-12 grid h-24 w-28 place-items-center rounded-[2rem] bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-2xl shadow-blue-500/30" animate={{ y: [0, -12, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}>
         <CloudUpload className="h-11 w-11" />
-      </div>
-      <div className="absolute left-8 top-2 grid h-20 w-20 place-items-center rounded-[1.5rem] bg-white shadow-xl shadow-blue-900/10">
+      </motion.div>
+      <motion.div className="absolute left-8 top-2 grid h-20 w-20 place-items-center rounded-[1.5rem] bg-white shadow-xl shadow-blue-900/10" animate={{ y: [0, 8, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}>
         <Database className="h-9 w-9 text-blue-500" />
-      </div>
-      <div className="absolute bottom-14 right-28 grid h-20 w-20 place-items-center rounded-[1.5rem] bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-xl shadow-blue-500/30">
+      </motion.div>
+      <motion.div className="absolute bottom-14 right-28 grid h-20 w-20 place-items-center rounded-[1.5rem] bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-xl shadow-blue-500/30" animate={{ y: [0, -9, 0] }} transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}>
         <PieChart className="h-9 w-9" />
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
 
-function FloatingCard({ children, className }) {
+function FloatingCard({ children, className, delay = 0 }) {
   return (
-    <div className={`absolute rounded-2xl border border-blue-100 bg-white/95 p-3 shadow-xl shadow-blue-900/10 backdrop-blur ${className}`}>
+    <motion.div
+      className={`absolute rounded-2xl border border-blue-100 bg-white/95 p-3 shadow-xl shadow-blue-900/10 backdrop-blur ${className}`}
+      animate={{ y: [0, -8, 0] }}
+      transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay }}
+    >
       {children}
-    </div>
+    </motion.div>
   )
 }
 

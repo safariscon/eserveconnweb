@@ -1,32 +1,27 @@
 import { motion } from 'motion/react'
 import { Rocket, ShieldCheck } from 'lucide-react'
-import { Link } from 'react-router-dom'
 import Button from '../common/Button'
 import SoftwareSolutionsVisual from '../common/SoftwareSolutionsVisual'
 import { company } from '../../content/company'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-20 lg:pt-14">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_12%,rgba(37,99,235,0.18),transparent_34%),linear-gradient(180deg,#f8fbff_0%,#ffffff_64%)]" />
+    <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-16">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_8%,rgba(37,99,235,0.16),transparent_32%),linear-gradient(180deg,#f8fbff_0%,#ffffff_70%)]" />
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-extrabold text-blue-700 shadow-sm">
-            Eserveconn Ltd · eServeConn Rwanda
+          <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-xs font-semibold text-blue-700 shadow-sm">
+            {company.name} · Rwanda
           </span>
-          <h1 className="mt-7 max-w-3xl font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-[4.25rem]">
-            Eserveconn -{' '}
-            <span className="text-blue-600">
-              Digital Solutions & Software Development
-            </span>
+          <h1 className="mt-7 max-w-3xl font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-[4.15rem]">
+            Digital solutions that{' '}
+            <span className="text-blue-600">work in the real world</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 lg:text-xl">
-            {company.name} develops modern software solutions that help citizens, businesses, and institutions become more efficient through technology. Also known as eServeConn and eServe Connect, we run a{' '}
-            <Link className="font-semibold text-blue-700 underline-offset-2 hover:underline" to="/products">service connection platform</Link>
-            {' '}that helps people find service providers and connect customers with services in Kigali and across Rwanda.
+          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 lg:text-xl">
+            We build modern software, websites, and digital platforms that help organizations in Rwanda work faster, serve people better, and grow with confidence.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button to="/products">Explore Products</Button>
+            <Button to="/services">Explore Services</Button>
             <Button to="/contact" variant="secondary">Contact Us</Button>
           </div>
           <div className="mt-8 flex flex-wrap gap-4 text-sm font-semibold text-slate-500">

@@ -1,3 +1,4 @@
+import PageHero from '../components/common/PageHero'
 import Contact from '../components/sections/Contact'
 import { pagesSeo } from '../content/seo'
 import { breadcrumbSchema, organizationSchema, setPageMeta, webPageSchema } from '../utils/seo'
@@ -20,5 +21,14 @@ export default function ContactPage() {
     ],
   })
 
-  return <Contact headingAs="h1" />
+  return (
+    <>
+      <PageHero
+        eyebrow="Contact"
+        title="Let's build something together"
+        description="Tell us about your project. We will reply with clear next steps."
+      />
+      <Contact headingAs="h2" showHeader={false} />
+    </>
+  )
 }

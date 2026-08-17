@@ -1,3 +1,4 @@
+import PageHero from '../components/common/PageHero'
 import Team from '../components/sections/Team'
 import { pagesSeo } from '../content/seo'
 import { breadcrumbSchema, organizationSchema, setPageMeta, webPageSchema } from '../utils/seo'
@@ -20,5 +21,14 @@ export default function TeamPage() {
     ],
   })
 
-  return <Team headingAs="h1" />
+  return (
+    <>
+      <PageHero
+        eyebrow="Team"
+        title="The people behind Eserveconn"
+        description="A focused team of builders shaping reliable software for Rwanda and beyond."
+      />
+      <Team headingAs="h2" showHeader={false} />
+    </>
+  )
 }

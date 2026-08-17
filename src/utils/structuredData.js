@@ -1,23 +1,7 @@
-import { faqs } from '../content/faq'
 import { products } from '../content/products'
 import { services } from '../content/services'
 import { slugify } from './helpers'
 import { canonicalUrl } from './seo'
-
-export function faqSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  }
-}
 
 export function servicesSchema() {
   return {

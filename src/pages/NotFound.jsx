@@ -15,7 +15,7 @@ export default function NotFound() {
   })
 
   return (
-    <section className="grid min-h-[65vh] place-items-center px-4 py-20 text-center">
+    <section className="grid min-h-[70vh] place-items-center bg-[linear-gradient(180deg,#eff6ff_0%,#ffffff_70%)] px-4 py-20 text-center">
       <div>
         <p className="font-display text-7xl font-extrabold text-blue-600">404</p>
         <h1 className="mt-4 font-display text-3xl font-extrabold text-slate-950">Page not found</h1>

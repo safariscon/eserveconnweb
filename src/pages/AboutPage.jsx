@@ -1,5 +1,5 @@
 import About from '../components/sections/About'
-import Faq from '../components/sections/Faq'
+import PageHero from '../components/common/PageHero'
 import WhyChooseUs from '../components/sections/WhyChooseUs'
 import { pagesSeo } from '../content/seo'
 import { breadcrumbSchema, organizationSchema, setPageMeta, webPageSchema } from '../utils/seo'
@@ -24,9 +24,13 @@ export default function AboutPage() {
 
   return (
     <>
-      <About headingAs="h1" />
+      <PageHero
+        eyebrow="About"
+        title="A software company built in Rwanda"
+        description="We design and deliver reliable digital products for businesses, institutions, and communities across Rwanda."
+      />
+      <About headingAs="h2" showHeader={false} />
       <WhyChooseUs />
-      <Faq />
     </>
   )
 }

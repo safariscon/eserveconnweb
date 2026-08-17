@@ -1,8 +1,14 @@
 import { Bell, ChevronDown, Moon, Search } from 'lucide-react'
 
-export default function SafariSconVisual({ compact = false }) {
+export default function SafariSconVisual({ compact = false, className = '' }) {
+  const frame = className
+    ? ''
+    : compact
+      ? 'h-48 rounded-t-3xl'
+      : 'rounded-[1.75rem] border border-slate-200 shadow-2xl shadow-blue-950/10'
+
   return (
-    <div className={`overflow-hidden bg-white ${compact ? 'h-48 rounded-t-3xl' : 'rounded-[1.75rem] border border-slate-200 shadow-2xl shadow-blue-950/10'}`} role="img" aria-label="SafariScon service marketplace preview for finding local service providers in Rwanda and Kigali">
+    <div className={`overflow-hidden bg-white ${frame} ${className}`} role="img" aria-label="SafariScon marketplace preview">
       <div className="bg-blue-600 px-4 py-2 text-center text-[9px] font-extrabold text-white">
         <Bell className="mr-1.5 inline h-3 w-3" />
         Book trusted travel, hospitality, transport, food, and experience services across Rwanda.

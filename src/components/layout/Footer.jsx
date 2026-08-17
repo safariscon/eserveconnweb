@@ -5,50 +5,31 @@ import { slugify } from '../../utils/helpers'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 px-4 py-12 text-slate-300 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
+    <footer className="border-t border-blue-900 bg-blue-950 px-4 py-14 text-blue-100 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-600 font-display text-sm font-extrabold text-white">E</span>
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-blue-600 font-display text-sm font-extrabold text-white">E</span>
             <span className="font-display font-extrabold text-white">{company.name}</span>
           </div>
-          <p className="mt-4 text-sm leading-6 text-slate-400">A Rwandan software company building secure, scalable digital products.</p>
-          <p className="mt-3 text-sm leading-6 text-slate-400">
-            eServeConn, also known as eServe Connect, ServiceConn, eservecon, and eserve con, is a service connection platform that helps people find service providers and connect customers with services in Kigali and across Rwanda.
-          </p>
-          <div className="mt-5 flex gap-3">
-            {['f', 'in', 'X'].map((item) => (
-              <span key={item} className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-xs font-bold text-white">
-                {item}
-              </span>
-            ))}
-          </div>
+          <p className="mt-4 max-w-xs text-sm leading-6 text-blue-200/80">{company.tagline}</p>
         </div>
         <FooterLinks title="Quick Links" items={navigation.map((item) => ({ label: item.label, path: item.path }))} />
         <FooterLinks
           title="Services"
-          items={[
-            ...services.slice(0, 5).map((service) => ({ label: service.title, path: `/services#${slugify(service.title)}` })),
-            { label: 'All eServeConn Services', path: '/services' },
-          ]}
+          items={services.slice(0, 5).map((service) => ({ label: service.title, path: `/services#${slugify(service.title)}` }))}
         />
         <div>
-          <h3 className="font-display font-bold text-white">Contact Information</h3>
-          <div className="mt-4 space-y-3 text-sm text-slate-400">
-            <p>{company.email}</p>
-            <p>{company.phone}</p>
+          <h3 className="font-display font-bold text-white">Contact</h3>
+          <div className="mt-4 space-y-3 text-sm text-blue-200/80">
+            <a className="block transition hover:text-white" href={`mailto:${company.email}`}>{company.email}</a>
+            <a className="block transition hover:text-white" href="https://wa.me/250788836180" target="_blank" rel="noreferrer">{company.phone}</a>
             <p>{company.location}</p>
-            <p>Serving {company.serviceArea}</p>
-          </div>
-          <div className="mt-5 grid gap-2 text-sm text-slate-400">
-            <Link to="/products" className="transition hover:text-white">eServeConn Platform</Link>
-            <Link to="/products" className="transition hover:text-white">Service marketplace</Link>
-            <Link to="/contact" className="transition hover:text-white">Service Connect Kigali</Link>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:justify-between">
-        <p>© 2026 {company.name}. All Rights Reserved.</p>
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-6 text-sm text-blue-200/60 sm:flex-row sm:justify-between">
+        <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
         <p>Built in Gisenyi, Rwanda.</p>
       </div>
     </footer>
@@ -59,7 +40,7 @@ function FooterLinks({ title, items }) {
   return (
     <div>
       <h3 className="font-display font-bold text-white">{title}</h3>
-      <div className="mt-4 grid gap-2 text-sm text-slate-400">
+      <div className="mt-4 grid gap-2 text-sm text-blue-200/80">
         {items.map((item) => (
           <Link key={item.label} to={item.path} className="transition hover:text-white">
             {item.label}

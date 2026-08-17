@@ -1,5 +1,5 @@
+import PageHero from '../components/common/PageHero'
 import Products from '../components/sections/Products'
-import Stats from '../components/sections/Stats'
 import { pagesSeo } from '../content/seo'
 import { breadcrumbSchema, organizationSchema, setPageMeta, webPageSchema } from '../utils/seo'
 import { productsSchema } from '../utils/structuredData'
@@ -25,8 +25,12 @@ export default function ProductsPage() {
 
   return (
     <>
-      <Products headingAs="h1" />
-      <Stats />
+      <PageHero
+        eyebrow="Products"
+        title="Platforms we build and operate"
+        description="Practical digital products designed to help people discover, book, and manage services with confidence."
+      />
+      <Products headingAs="h2" showHeader={false} />
     </>
   )
 }

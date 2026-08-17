@@ -1,4 +1,4 @@
-import Faq from '../components/sections/Faq'
+import PageHero from '../components/common/PageHero'
 import Services from '../components/sections/Services'
 import WhyChooseUs from '../components/sections/WhyChooseUs'
 import { pagesSeo } from '../content/seo'
@@ -26,9 +26,13 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Services headingAs="h1" />
+      <PageHero
+        eyebrow="Services"
+        title="Software, websites, and systems that work"
+        description="From first concept to long-term support, we cover the full software lifecycle with clear delivery and practical engineering."
+      />
+      <Services headingAs="h2" showHeader={false} />
       <WhyChooseUs />
-      <Faq />
     </>
   )
 }
