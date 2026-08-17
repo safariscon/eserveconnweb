@@ -19,7 +19,7 @@ export default function About({ headingAs = 'h2', showHeader = true }) {
             as={headingAs}
             eyebrow="About Us"
             title={`About ${company.name}`}
-            description="A Rwandan software company building accessible, reliable technology from Gisenyi for organizations ready to grow."
+            description="eServeConn is a software company in Rwanda, also known as eServe Connect, ServiceConn, and Service Connection. We build software, web applications, and a service connection platform from Gisenyi for teams in Kigali and nationwide."
           />
         ) : null}
         <div className="grid gap-5 lg:grid-cols-3">

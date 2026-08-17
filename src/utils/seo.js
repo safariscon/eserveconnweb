@@ -145,6 +145,18 @@ export function organizationSchema(description) {
       areaServed: ['RW', 'Kigali'],
       availableLanguage: ['English', 'Kinyarwanda'],
     },
+    knowsAbout: [
+      'eServeConn',
+      'eServe Connect',
+      'ServiceConn',
+      'Service Connection',
+      'service connection platform',
+      'software development',
+      'web development',
+      'application development',
+      'software company Rwanda',
+    ],
+    slogan: company.tagline,
   }
 }
 
@@ -153,7 +165,7 @@ export function websiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteName,
-    alternateName: ['eServeConn', 'eServe Connect', 'eServe Connection', 'ServiceConn', 'Service Connect', 'Eserve Conn', 'Eserve', 'eservecon', 'eserve con', 'Eservecon'],
+    alternateName: brandNames.filter((name) => name !== siteName),
     url: canonicalUrl('/'),
     inLanguage: 'en',
     publisher: {

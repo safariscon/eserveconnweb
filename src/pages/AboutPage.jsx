@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A software company built in Rwanda"
-        description="We design and deliver reliable digital products for businesses, institutions, and communities across Rwanda."
+        description="eServeConn is a software company in Rwanda, also known as eServe Connect and ServiceConn. We design digital products and a service connection platform for teams across Rwanda."
       />
       <About headingAs="h2" showHeader={false} />
       <WhyChooseUs />

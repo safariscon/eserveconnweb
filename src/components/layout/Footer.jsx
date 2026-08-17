@@ -13,6 +13,9 @@ export default function Footer() {
             <span className="font-display font-extrabold text-white">{company.name}</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-6 text-blue-200/80">{company.tagline}</p>
+          <p className="mt-3 max-w-xs text-xs leading-5 text-blue-200/70">
+            Also known as eServe Connect, ServiceConn, and Service Connection. If you searched eservecon, this is the official eServeConn website.
+          </p>
         </div>
         <FooterLinks title="Quick Links" items={navigation.map((item) => ({ label: item.label, path: item.path }))} />
         <FooterLinks

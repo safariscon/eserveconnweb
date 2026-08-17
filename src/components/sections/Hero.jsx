@@ -18,7 +18,7 @@ export default function Hero() {
             <span className="text-blue-600">work in the real world</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 lg:text-xl">
-            We build modern software, websites, and digital platforms that help organizations in Rwanda work faster, serve people better, and grow with confidence.
+            We build modern software, websites, and digital platforms as a software company in Rwanda. eServeConn, also known as eServe Connect and ServiceConn, is a service connection company helping organizations in Kigali grow with confidence.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button to="/services">Explore Services</Button>

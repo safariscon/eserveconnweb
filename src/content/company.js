@@ -12,7 +12,7 @@ export const company = {
   vision:
     "Become one of Rwanda's leading software companies delivering impactful digital transformation across Africa.",
   story:
-    'Eserveconn Ltd exists to make excellent software more accessible to teams in Rwanda and across Africa. We combine product thinking, reliable engineering, and practical support.',
+    'eServeConn, also known as eServe Connect and ServiceConn, is a software development company in Rwanda. We make excellent software more accessible and also run a service connection platform for teams in Kigali and across Africa.',
   reason:
     'We build because many promising organizations still lose time to disconnected tools, manual processes, and fragile systems. Our work turns those bottlenecks into simple, secure digital experiences.',
 }
